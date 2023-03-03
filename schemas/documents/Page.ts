@@ -14,12 +14,51 @@ export default defineType({
         }),
         defineField({
         title:"Sections",
-        type:"array",
         name:"sections",
+        type:"array",
         of:[
             defineArrayMember({
+                type:"carousel",
+            }),
+            defineArrayMember({
+                type:"clients",
+            }),
+            defineArrayMember({
+                type:"cta",
+            }),
+            defineArrayMember({
+                type:"features",
+            }),
+            defineArrayMember({
+                type:"footer",
+            }),
+            defineArrayMember({
+                type:"goals",
+            }),
+            defineArrayMember({
+                type:"header",
+            }),
+            defineArrayMember({
                 type:"hero",
-            })
+            }),
+            defineArrayMember({
+                type:"hero_featured_products",
+            }),
+            defineArrayMember({
+                type:"how_does_it_work",
+            }),
+            defineArrayMember({
+                type:"leadership",
+            }),
+            defineArrayMember({
+                type:"notification",
+            }),
+            defineArrayMember({
+                type:"testimonials",
+            }),
+            defineArrayMember({
+                type:"video",
+            }),
         ]
     })]
 })
