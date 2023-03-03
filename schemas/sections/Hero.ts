@@ -1,4 +1,4 @@
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 
 export default defineType({
     name:"hero",
@@ -13,11 +13,10 @@ export default defineType({
         defineField({
             name:"sub_heading",
             title:"Sub Heading",
-            type:"string"
+            type:"text"
         }),
         defineField({
             name:"gallery",
-            title:"Gallery",
             type:"gallery"
         })
     ]

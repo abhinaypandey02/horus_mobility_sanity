@@ -1,18 +1,24 @@
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 
 export default defineType({
     name:"page",
     type:"document",
     title:"Page",
-    fields:[defineField({
+    i18n:true,
+
+    fields:[
+        defineField({
+            title:"Title",
+            name:"title",
+            type:"string"
+        }),
+        defineField({
         title:"Sections",
         type:"array",
         name:"sections",
         of:[
-            defineField({
-                title:"Hero",
+            defineArrayMember({
                 type:"hero",
-                name:"hero"
             })
         ]
     })]

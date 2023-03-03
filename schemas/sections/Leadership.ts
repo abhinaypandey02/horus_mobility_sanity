@@ -1,0 +1,42 @@
+import { defineArrayMember, defineField, defineType } from "sanity";
+
+export default defineType({
+    name:"leadership",
+    title:"Leadership",
+    type:"object",
+    fields:[
+        defineField({
+            name:"heading",
+            title:"Heading",
+            type:"string"
+        }),
+        defineField({
+            name:"members",
+            type:"array",
+            title:"Members",
+            of:[
+                defineArrayMember({
+                    type:'object',
+                    title:"Member",
+                    fields:[
+                        defineField({
+                            name:"photo",
+                            type:"photo",
+                            title:"Icon"
+                        }),
+                        defineField({
+                            name:"heading",
+                            title:"Heading",
+                            type:"string"
+                        }),
+                        defineField({
+                            name:"designation",
+                            title:"Designation",
+                            type:"string",
+                        }),
+                    ]
+                })
+            ]
+        }),
+    ]
+})
