@@ -13,6 +13,19 @@ export default defineType({
             type:"string"
         }),
         defineField({
+            title:"Description",
+            name:"description",
+            type:"string"
+        }),
+        defineField({
+            title:"Slug",
+            name:"title",
+            type:"slug",
+            options:{
+                source:'title'
+            }
+        }),
+        defineField({
         title:"Sections",
         name:"sections",
         type:"array",
